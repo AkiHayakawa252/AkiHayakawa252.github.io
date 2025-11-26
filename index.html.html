@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfabetización Digital y de la IA - NEON</title>
+    <!-- Carga de Tailwind CSS para estilos modernos y responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración de la fuente Inter y el modo oscuro/neón -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Fondo muy oscuro, casi negro */
+            color: #e6edf3; /* Texto principal claro */
+        }
+        /* Estilos Neón */
+        .neon-blue {
+            color: #38bdf8; /* Azul cian brillante */
+            text-shadow: 0 0 5px #0ea5e9, 0 0 10px #0ea5e9;
+        }
+        .neon-red {
+            color: #f87171; /* Rojo brillante */
+            text-shadow: 0 0 5px #ef4444, 0 0 10px #ef4444;
+        }
+        .border-neon-blue {
+            border-color: #38bdf8;
+        }
+        .bg-neon-dark {
+            background-color: #161b22; /* Un gris oscuro para secciones */
+        }
+        /* Estilos personalizados para la interactividad del quiz */
+        .quiz-option {
+            background-color: #21262d;
+            border: 2px solid #30363d;
+            transition: all 0.2s;
+        }
+        .quiz-option:hover {
+            cursor: pointer;
+            background-color: #30363d;
+        }
+        .selected {
+            border: 2px solid #38bdf8; /* Borde azul neón para selección */
+            background-color: #0e4e7e40; /* Fondo sutilmente azul */
+        }
+        .disabled-option {
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado Fijo y Neón -->
+    <header class="sticky top-0 bg-neon-dark shadow-xl z-10 border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-black neon-blue">
+                <span class="text-white">CYBER</span>-ALFABETIZACIÓN <span class="neon-red">2025</span>
+            </h1>
+            <nav class="hidden md:block">
+                <a href="#introduccion" class="text-gray-400 hover:neon-blue mx-4 font-medium transition duration-200">Digital</a>
+                <a href="#ia" class="text-gray-400 hover:neon-blue mx-4 font-medium transition duration-200">Inteligencia Artificial</a>
+                <a href="#quiz" class="px-4 py-1.5 border-2 border-neon-blue rounded-full neon-blue font-bold hover:bg-blue-900/50 transition duration-300">Test V/F</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Sección 1: Introducción Reforzada y Diseño Oscuro -->
+        <section id="introduccion" class="mb-20 p-8 bg-neon-dark shadow-2xl rounded-xl border border-gray-700">
+            <h2 class="text-5xl font-extrabold neon-blue mb-8 pb-4 border-b-4 border-neon-blue inline-block">
+                01. Cimientos de la Era Digital
+            </h2>
+            <p class="text-xl mb-6 text-gray-300 leading-relaxed">
+                La <strong class="neon-red">Alfabetización Digital</strong> es la llave de acceso a la sociedad moderna. No es un lujo, sino una necesidad fundamental que garantiza la participación plena en el ámbito laboral, educativo y social. Esta competencia va más allá del simple manejo de herramientas; es la capacidad de <span class="font-bold text-white">navegar, evaluar y crear</span> con tecnología de forma crítica y segura.
+            </p>
+
+            <h3 class="text-3xl font-bold text-gray-200 mt-10 mb-4 border-l-4 border-neon-red pl-3">Los Tres Pilares Fundamentales:</h3>
+            <p class="text-lg text-gray-400 mb-6">
+                Según varios marcos educativos y empresariales, la alfabetización digital se construye sobre tres grandes ejes que definen nuestra interacción con el entorno digital:
+            </p>
+            <div class="grid lg:grid-cols-3 gap-6 mt-6">
+                <div class="p-5 bg-gray-900 rounded-lg shadow-lg border border-gray-800">
+                    <span class="text-2xl neon-blue block mb-2">🔍</span>
+                    <h4 class="font-bold text-xl text-white mb-2">1. Consumo Crítico de Contenido</h4>
+                    <p class="text-gray-400 text-sm">Implica saber **encontrar** información específica usando motores de búsqueda avanzados, pero, sobre todo, la habilidad de **evaluar** su fiabilidad. Debemos distinguir activamente las fuentes oficiales de la desinformación (Fake News), entendiendo que la lectura en línea es diferente a la de papel, al incluir hipervínculos y contenido multimedia.</p>
+                </div>
+                <div class="p-5 bg-gray-900 rounded-lg shadow-lg border border-gray-800">
+                    <span class="text-2xl neon-red block mb-2">🛠️</span>
+                    <h4 class="font-bold text-xl text-white mb-2">2. Creación y Diseño de Contenido</h4>
+                    <p class="text-gray-400 text-sm">Esta es la capacidad de **producir** activamente contenido digital, ya sea un simple correo electrónico, un comentario en un foro, un gráfico o un video. Las personas alfabetizadas son **reflexivas y responsables** al crear, comprendiendo los derechos de autor, la propiedad intelectual y el impacto que tienen sus publicaciones en su propia imagen y en la sociedad.</p>
+                </div>
+                <div class="p-5 bg-gray-900 rounded-lg shadow-lg border border-gray-800">
+                    <span class="text-2xl neon-blue block mb-2">🌐</span>
+                    <h4 class="font-bold text-xl text-white mb-2">3. Comunicación y Ciudadanía Digital</h4>
+                    <p class="text-gray-400 text-sm">Se refiere a la **interacción segura y ética** en redes y plataformas. Esto incluye la **ciberseguridad** (gestión de contraseñas y privacidad) y el cumplimiento de la **netiqueta** (normas de comportamiento en línea). La alfabetización digital promueve la participación activa y el uso de las redes sociales para el beneficio comunitario y la cocreación de recursos.</p>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Sección 2: Alfabetización en Inteligencia Artificial (IA) -->
+        <section id="ia" class="mb-20 p-8 bg-neon-dark shadow-2xl rounded-xl border border-gray-700">
+            <h2 class="text-5xl font-extrabold neon-red mb-8 pb-4 border-b-4 border-neon-red inline-block">
+                02. Navegando la Frontera de la IA
+            </h2>
+            <p class="text-xl mb-6 text-gray-300 leading-relaxed">
+                La <strong class="neon-blue">Alfabetización en IA</strong> es la extensión moderna y crucial de la competencia digital. Su objetivo no es que programes algoritmos, sino que entiendas cómo los algoritmos te están programando a ti, desde las recomendaciones de contenido hasta las decisiones crediticias o laborales. Implica cultivar el <span class="font-bold text-white">juicio humano y la justicia</span> como principios rectores en un mundo algorítmico.
+            </p>
+
+            <h3 class="text-3xl font-bold text-gray-200 mt-10 mb-4 border-l-4 border-neon-blue pl-3">Principios Éticos de la IA que Debes Conocer:</h3>
+            <p class="text-lg text-gray-400 mb-6">
+                Para usar la IA de manera responsable, es fundamental comprender los desafíos éticos que surgen en su desarrollo y aplicación:
+            </p>
+
+            <div class="grid lg:grid-cols-3 gap-6 mt-6">
+                <div class="p-5 bg-gray-900 rounded-lg shadow-lg border border-gray-800">
+                    <span class="text-2xl neon-red block mb-2">⚖️</span>
+                    <h4 class="font-bold text-xl text-white mb-2">Equidad y Justicia</h4>
+                    <p class="text-gray-400 text-sm">Se requiere que los sistemas de IA sean no discriminatorios. Debemos ser conscientes de que si los datos de entrenamiento contienen **sesgos** históricos o sociales (por ejemplo, hacia ciertos grupos demográficos), la IA amplificará esos prejuicios, afectando la equidad de sus decisiones (ej. en contrataciones o sistemas judiciales).</p>
+                </div>
+                <div class="p-5 bg-gray-900 rounded-lg shadow-lg border border-gray-800">
+                    <span class="text-2xl neon-blue block mb-2">👁️</span>
+                    <h4 class="font-bold text-xl text-white mb-2">Transparencia y Explicabilidad</h4>
+                    <p class="text-gray-400 text-sm">La IA a menudo funciona como una "caja negra". La transparencia requiere que podamos **entender y explicar** por qué un sistema de IA tomó una decisión, especialmente en áreas de alto riesgo (como la medicina). Esto es clave para el derecho a **apelar o impugnar** las decisiones automatizadas.</p>
+                </div>
+                <div class="p-5 bg-gray-900 rounded-lg shadow-lg border border-gray-800">
+                    <span class="text-2xl neon-red block mb-2">🛡️</span>
+                    <h4 class="font-bold text-xl text-white mb-2">Privacidad y No Maleficencia</h4>
+                    <p class="text-gray-400 text-sm">La IA se alimenta de grandes volúmenes de datos. La privacidad exige la **protección de datos** por diseño y la **minimización** de la recolección. El principio de No Maleficencia (o Seguridad) establece que la IA no debe causar daños previsibles o no intencionados a las personas o la sociedad.</p>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Sección 3: Test de Verdadero o Falso - Neón -->
+        <section id="quiz" class="p-8 bg-gray-900 shadow-2xl rounded-xl border border-gray-700">
+            <h2 class="text-5xl font-extrabold text-center neon-red mb-10">03. Test V/F - Fundamentos Fáciles</h2>
+
+            <!-- Instrucción visible antes de iniciar la encuesta -->
+            <div class="mb-8 p-4 bg-yellow-900/40 border-l-4 border-yellow-400 text-yellow-200">
+                <p class="font-bold">INSTRUCCIÓN IMPORTANTE:</p>
+                <p>Selecciona tu respuesta (Verdadero o Falso) para cada pregunta. Una vez presiones el botón "TERMINAR ENCUESTA", tus respuestas no podrán ser modificadas.</p>
+            </div>
+
+
+            <!-- Contenedor del Quiz -->
+            <div id="quiz-container" class="quiz-container max-w-4xl mx-auto space-y-8">
+                <!-- Las preguntas se inyectarán aquí por JavaScript -->
+            </div>
+
+            <!-- Botón de Enviar Respuestas -->
+            <div class="flex justify-center mt-12">
+                <button id="submit-quiz" class="px-10 py-4 bg-neon-red text-gray-900 font-black text-xl rounded-lg shadow-xl hover:bg-red-500 transition duration-300 transform hover:scale-105 border-2 border-white" onclick="submitQuiz()">
+                    TERMINAR ENCUESTA Y VER RESULTADOS
+                </button>
+            </div>
+
+            <!-- Sección de Resultados (Inicialmente oculta) -->
+            <div id="results-section" class="mt-16 p-8 bg-gray-800 border-4 border-neon-blue rounded-xl shadow-inner hidden">
+                <h3 class="text-3xl font-black text-center neon-blue mb-4">🏆 REPORTE DE RESULTADOS 🏆</h3>
+                <p class="text-center text-2xl font-bold">Aciertos: <span id="correct-count" class="font-extrabold text-green-400">0</span> / 10</p>
+                <p class="text-center text-2xl font-bold">Errores: <span id="incorrect-count" class="font-extrabold neon-red">0</span> / 10</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-gray-500 py-6 mt-20 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>Construyendo el futuro digital. | &copy; 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        // Array de objetos para las preguntas y respuestas (simplificadas)
+        const quizQuestions = [
+            {
+                question: "Para ser 'alfabetizado digitalmente', solo necesito saber cómo encender una computadora.",
+                answer: false, // Falso
+                explanation: "La alfabetización digital incluye habilidades críticas como evaluar información y seguridad, no solo el encendido."
+            },
+            {
+                question: "Una contraseña fuerte debe ser fácil de recordar y la misma para todas tus cuentas.",
+                answer: false, // Falso
+                explanation: "Una contraseña fuerte debe ser única para cada cuenta y difícil de adivinar (mezcla de caracteres)."
+            },
+            {
+                question: "La Inteligencia Artificial (IA) es un sistema que puede imitar o realizar tareas que normalmente requieren inteligencia humana.",
+                answer: true, // Verdadero
+                explanation: "Correcto. Imitar el razonamiento, aprendizaje o la resolución de problemas es el objetivo de la IA."
+            },
+            {
+                question: "Si recibes un correo pidiendo tu contraseña bancaria, es seguro si el email se ve profesional.",
+                answer: false, // Falso
+                explanation: "¡Falso! Ningún banco te pedirá la contraseña por correo electrónico. Esto es una señal de phishing."
+            },
+            {
+                question: "Los sistemas de IA Generativa (como los chatbots) siempre crean contenido 100% veraz y libre de errores.",
+                answer: false, // Falso
+                explanation: "Falso. A menudo cometen errores (alucinaciones) y su contenido debe ser verificado por un humano."
+            },
+            {
+                question: "El 'pensamiento crítico' es una habilidad clave de la alfabetización digital para no creer todo lo que ves online.",
+                answer: true, // Verdadero
+                explanation: "Es fundamental para distinguir información fiable de la desinformación (Fake News)."
+            },
+            {
+                question: "Los datos que dejas al navegar por internet se conocen como tu 'huella digital'.",
+                answer: true, // Verdadero
+                explanation: "Toda tu actividad online, desde publicaciones hasta búsquedas, deja un rastro digital."
+            },
+            {
+                question: "Un 'prompt' es simplemente una palabra clave en un buscador; no necesita ser detallado para la IA.",
+                answer: false, // Falso
+                explanation: "La calidad de la respuesta de la IA depende de un 'prompt' bien formulado, que sea claro y específico."
+            },
+            {
+                question: "La principal preocupación ética con la IA es que puede tener sesgos o prejuicios heredados de los datos que utilizó para aprender.",
+                answer: true, // Verdadero
+                explanation: "Este es uno de los mayores desafíos: los sesgos en los datos se convierten en sesgos en la IA."
+            },
+            {
+                question: "El protocolo HTTPS en un sitio web significa que la conexión entre tu navegador y el sitio es segura (cifrada).",
+                answer: true, // Verdadero
+                explanation: "Verdadero. Esto asegura que la información no pueda ser interceptada fácilmente, aunque no garantiza que el contenido sea cierto."
+            }
+        ];
+
+        let userAnswers = {}; // Almacenará {questionIndex: selectedAnswer (true/false)}
+        let quizSubmitted = false;
+
+        // Función para renderizar el quiz en el DOM
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = ''; // Limpiar contenido existente
+
+            quizQuestions.forEach((item, index) => {
+                const questionHtml = `
+                    <div class="p-6 bg-gray-800 rounded-lg shadow-xl border-l-4 border-neon-blue" data-index="${index}">
+                        <p class="text-xl font-semibold mb-4 text-gray-200">
+                            <span class="neon-red mr-2 font-extrabold">P${index + 1}:</span> ${item.question}
+                        </p>
+                        <div class="flex space-x-6">
+                            <!-- Opción Verdadero -->
+                            <div id="q${index}-true" class="quiz-option flex-1 p-4 rounded-xl text-center font-bold text-lg hover:border-neon-red"
+                                onclick="selectAnswer(${index}, true)">
+                                VERDADERO
+                            </div>
+                            <!-- Opción Falso -->
+                            <div id="q${index}-false" class="quiz-option flex-1 p-4 rounded-xl text-center font-bold text-lg hover:border-neon-red"
+                                onclick="selectAnswer(${index}, false)">
+                                FALSO
+                            </div>
+                        </div>
+                        <!-- Contenedor para el feedback después de enviar -->
+                        <div id="feedback-${index}" class="mt-4 text-sm hidden border-t border-gray-700 pt-3"></div>
+                    </div>
+                `;
+                container.innerHTML += questionHtml;
+            });
+        }
+
+        // Función para manejar la selección de una respuesta
+        function selectAnswer(index, answer) {
+            if (quizSubmitted) return; // No permitir cambios si ya se envió
+
+            userAnswers[index] = answer;
+
+            // Quitar clase 'selected' de ambas opciones
+            document.getElementById(`q${index}-true`).classList.remove('selected');
+            document.getElementById(`q${index}-false`).classList.remove('selected');
+
+            // Poner clase 'selected' en la opción elegida
+            document.getElementById(`q${index}-${answer}`).classList.add('selected');
+        }
+
+        // Función para enviar el quiz y mostrar los resultados
+        function submitQuiz() {
+            if (quizSubmitted) return; // Evitar doble envío
+            quizSubmitted = true;
+
+            let correctCount = 0;
+            const totalQuestions = quizQuestions.length;
+
+            // 1. Deshabilitar futuras interacciones
+            const options = document.querySelectorAll('.quiz-option');
+            options.forEach(option => {
+                option.classList.add('disabled-option');
+                option.onclick = null; // Eliminar el manejador de clic
+            });
+
+            // Deshabilitar el botón de enviar
+            const submitButton = document.getElementById('submit-quiz');
+            submitButton.disabled = true;
+            submitButton.classList.remove('hover:bg-red-500', 'hover:scale-105');
+            submitButton.classList.add('bg-gray-600', 'text-gray-400', 'cursor-not-allowed', 'shadow-none');
+            submitButton.textContent = 'ENCUESTA FINALIZADA - NO EDITABLE';
+
+            // 2. Evaluar respuestas, mostrar feedback y calcular puntaje
+            quizQuestions.forEach((item, index) => {
+                const userAnswer = userAnswers[index];
+                const isCorrect = userAnswer === item.answer;
+                const feedbackDiv = document.getElementById(`feedback-${index}`);
+                feedbackDiv.classList.remove('hidden');
+
+                let feedbackHtml = '';
+
+                if (isCorrect) {
+                    correctCount++;
+                    feedbackHtml = `<span class="font-bold text-green-400">¡ACIERTAS!</span> `;
+                } else {
+                    feedbackHtml = `<span class="font-bold neon-red">¡FALLAS!</span> La respuesta correcta era **${item.answer ? 'VERDADERO' : 'FALSO'}**. `;
+                }
+
+                feedbackHtml += `<span class="text-gray-400">Explicación: ${item.explanation}</span>`;
+                feedbackDiv.innerHTML = feedbackHtml;
+
+                // Estilos para indicar la respuesta correcta (después de enviar)
+                const correctOptionId = `q${index}-${item.answer}`;
+                const correctOption = document.getElementById(correctOptionId);
+                correctOption.classList.add('border-green-500', 'bg-green-900/40');
+                correctOption.classList.remove('selected'); // Quitamos el azul si era correcta
+
+                if (!isCorrect && userAnswer !== undefined) {
+                    // Si el usuario se equivocó, marcamos su respuesta como incorrecta
+                    const incorrectOptionId = `q${index}-${userAnswer}`;
+                    const incorrectOption = document.getElementById(incorrectOptionId);
+                    incorrectOption.classList.add('border-red-500', 'bg-red-900/40');
+                    incorrectOption.classList.remove('selected');
+                }
+            });
+
+            // 3. Mostrar la sección de resultados
+            const incorrectCount = totalQuestions - correctCount;
+            document.getElementById('correct-count').textContent = correctCount;
+            document.getElementById('incorrect-count').textContent = incorrectCount;
+            document.getElementById('results-section').classList.remove('hidden');
+
+            // Desplazar a los resultados
+            document.getElementById('results-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Iniciar el quiz al cargar la página
+        window.onload = renderQuiz;
+    </script>
+
+</body>
+</html>
